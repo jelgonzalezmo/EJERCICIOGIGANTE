@@ -51,12 +51,21 @@ public class Archivo implements CasaSofwareDB {
                 salida.print(programador.getId() + ",");
                 salida.print(programador.getNombre() + ",");
                 salida.print(programador.getSalario() + ",");
+                salida.print(programador.getLenguaje()+",");
             } else if (contrato instanceof Lider) {
-                Lider lider = (Lider) contrato;
+                Lider programador= (Lider) contrato;
                 salida.print("L,");
-                salida.print(lider.getId() + ",");
-                salida.print(lider.getNombre() + ",");
-                salida.print(lider.getSalario() + ",");
+                salida.print(programador.getId() + ",");
+                salida.print(programador.getNombre() + ",");
+                salida.print(programador.getSalario() + ",");
+                salida.print(programador.getLenguaje()+",");
+           //recorrer equipo
+           salida.print(programador.getEquipo().size()+",");
+                for (Programador p: programador.getEquipo()) {
+                    salida.print(p.getId()+",");
+                }
+            
+            
             }
         }
     }

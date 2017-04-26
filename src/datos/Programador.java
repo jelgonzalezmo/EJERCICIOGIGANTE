@@ -25,6 +25,14 @@ public class Programador extends Empleado{
         }
         this.lenguaje = lenguaje;
     }
+
+    public String getLenguaje() {
+        return lenguaje;
+    }
+
+    public void setLenguaje(String lenguaje) {
+        this.lenguaje = lenguaje;
+    }
     
     @Override
     public double calcularSalario() {

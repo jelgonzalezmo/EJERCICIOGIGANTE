@@ -5,6 +5,9 @@
  */
 package datos;
 
+import excepciones.LenguajeExcepcion;
+import excepciones.NombreExcepcion;
+import excepciones.SalarioExcepcion;
 import java.util.ArrayList;
 
 /**
@@ -13,8 +16,17 @@ import java.util.ArrayList;
  */
 public class Lider extends Programador{
     private ArrayList<Programador> equipo;
+
+    public ArrayList<Programador> getEquipo() {
+        return equipo;
+    }
+
+    public void setEquipo(ArrayList<Programador> equipo) {
+        this.equipo = equipo;
+    }
     
-    public Lider(int id, String nombre, double salario, String lenguaje) {
+    
+    public Lider(int id, String nombre, double salario, String lenguaje) throws NombreExcepcion, SalarioExcepcion, LenguajeExcepcion {
         super(id, nombre, salario, lenguaje);
         this.equipo= new ArrayList<>();
     }

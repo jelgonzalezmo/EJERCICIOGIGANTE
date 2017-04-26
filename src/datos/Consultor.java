@@ -12,6 +12,11 @@ package datos;
 public class Consultor implements Contrato{
     protected int id;
     protected String labor;
+
+    public Consultor(int id, String labor) {
+        this.id = id;
+        this.labor = labor;
+    }
     
     @Override
     public double calcularSalario() {
