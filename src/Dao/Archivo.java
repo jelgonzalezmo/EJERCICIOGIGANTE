@@ -24,12 +24,14 @@ public class Archivo implements CasaSofwareDB {
 
     private File archivo;
 
-    public Archivo(File archivo) {
+    public Archivo() {
         this.archivo = new File("casaSofware.txt");
     }
 
+    
     @Override
-    public void escribir(CasaSoftware cs) throws FileNotFoundException {
+    public void escribir(CasaSoftware cs)
+            throws FileNotFoundException {
         PrintStream salida = new PrintStream(archivo);
         ArrayList<Contrato> contratos = cs.getContratos();
         for (Contrato contrato : contratos) {
